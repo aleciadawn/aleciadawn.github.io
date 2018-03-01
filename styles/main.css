@@ -55,15 +55,15 @@ body {
 
 
 
-    .navbar .links-container {
-        display: block;
-        position: absolute;
-        margin: 0 auto;
-        width: 100%;
-        background-color: transparent;
-        height: 100px;
-        color: white;
-    }
+  .navbar .links-container {
+      display: block;
+      position: absolute;
+      margin: 0 auto;
+      width: 100%;
+      background-color: transparent;
+      height: 100px;
+      color: white;
+  }
 
  .links-container .navbar-link {
      display: inline;
@@ -86,7 +86,10 @@ body {
 
    /* #5 */
  .links-container .navbar-link:hover {
-     -moz-transform: scale(1, -1);
+
+   /*transform: rotate(180deg);*/
+
+    -moz-transform: scale(1, -1);
      -webkit-transform: scale(1, -1);
      -o-transform: scale(1, -1);
      -ms-transform: scale(1, -1);
