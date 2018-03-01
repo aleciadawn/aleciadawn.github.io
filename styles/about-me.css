@@ -6,6 +6,8 @@ body.landing {
      position: relative;
      height: 100%;
      width: auto;
+     opacity:1;
+     text-align: center;
      background-color: #462B38;
      background-repeat: no-repeat;
      background-position: center center;

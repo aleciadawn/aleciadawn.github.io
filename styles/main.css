@@ -4,7 +4,7 @@
      box-sizing: border-box;
  }
 html{
-  height: 100%; /* makes sure the HTML takes up 100% of the browser window */
+  height: 100%;
   font-size: 100%;
 }
 
@@ -48,10 +48,7 @@ body {
     position: fixed;
     top: 10%;
     width: 100%;
-    text-align: center;
-    font-family: 'freight-sans-pro', sans-serif;
-    font-weight: 100;
-    padding: 0.5rem;
+    text-align: right;
     background-color: transparent;
     z-index: 10;
     }
@@ -63,16 +60,13 @@ body {
         position: absolute;
         margin: 0 auto;
         width: 100%;
-        font-family: 'freight-sans-pro', sans-serif;
-        font-weight: 100;
-        padding: 0.5rem;
         background-color: transparent;
         height: 100px;
         color: white;
     }
 
  .links-container .navbar-link {
-     display: table-cell;
+     display: inline;
      position: sticky;
      height: 100%;
      padding-left: 1rem;
@@ -134,7 +128,6 @@ body {
        bottom: 10%;
        font-family: 'freight-sans-pro', sans-serif;
        font-weight: 100;
-       padding: 0.5rem;
        background-color: #3F6556;
        height: 50px;
        color: white;
