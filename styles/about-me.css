@@ -1,8 +1,9 @@
-body.landing {
+body {
      background-color: #462B38;
  }
 
- .hero-content {
+
+ #hero-content {
      position: relative;
      height: 100%;
      width: auto;
@@ -15,12 +16,12 @@ body.landing {
      z-index: -1;
  }
 
- .hero-content .hero-icon {
+ #hero-content #hero-icon {
    position: relative;
    align-content: center;
  }
 
- .hero-content .hero-title {
+ #hero-title {
      position: fixed;
      padding: 10%;
      top: 50%;
@@ -40,21 +41,47 @@ body.landing {
 
  .about {
    padding: 5%;
-   background-color: #462B38;
-   z-index: 2;
+   background-color: transparent;
+   z-index: 1;
  }
  .point {
    padding: 5%;
-   background-color: #462B38;
-   z-index: 2;
+   background-color: transparent;
+   z-index: 1;
  }
+
+ #about-me-container {
+    position: relative;
+		height:  100%;
+		width: 100%;
+		top: 20%;
+		left: 0;
+		float: left;
+		transform: translateX(-100%);
+  }
+
+  #photo-container {
+    position: relative;
+		height: 100%;
+		width: 100%;
+		top: 20%;
+		right: 0;
+		float: right;
+    background-color:
+		transform: translateX(100%);
+   }
+
+
+
+
+
  .point-title {
    padding-top: 20%;
-   background-color: #462B38;
-   z-index: 2;
+   background-color: transparent;
+   z-index: 1;
  }
  .find-me {
    padding: 5%;
-   background-color: #462B38;
-   z-index: 2;
+   background-color: transparent;
+   z-index: 1;
  }

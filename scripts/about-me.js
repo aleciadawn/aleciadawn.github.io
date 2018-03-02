@@ -1,22 +1,32 @@
-/*$(window).scroll(function(){
-    $(".hero-title").css("opacity", 1 - $(window).scrollTop() / 250);
-  });
 
-/*win.scroll(function(){
-  scrollPosition = win.scrollTop();
-  scrollRatio = 1 - scrollPosition / 300;
-  $(".top").css("opacity", scrollRatio);
-*/
+var myElement = document.getElementById('hero-content');
 
-//var controller = new ScrollMagic.Controller();
+window.onscroll = function() {fader()};
 
-// create a scene
-//new ScrollMagic.Scene({
-		//duration: 100,	// the scne should last for a scroll distance of 100px
-		//offset: 50		// start this scene after scrolling for 50px
-	//})
-	//.setPin("#hero-content" // pins the element for the the scene's duration
-	//.addTo(controller);// // assign the scene to the controlle
+function fader() {
+  var st = document.body.scrollTop;
+  console.log(st);
+  myElement.style.opacity = 1 - st/300;
+}
 
+      var tBox = document.getElementById('hero-content');
+			var lBox1 = document.getElementById('about-me-container');
+			var rBox1 = document.getElementById('photo-container');
 
-console.log("hi")
+			window.onscroll = function() {scrollAnimations()};
+
+			function scrollAnimations() {
+				var ypos = document.body.scrollTop;
+				var wh = window.innerHeight;
+
+				var pScroll = ypos/wh;
+				tBox.style.opacity = 1 - pScroll;
+
+				var offper = 100 - ( 100 * pScroll);
+
+				if( pScroll > 1 ) {
+					var offper = 0;
+				}
+				lBox1.style.transform = "translateX(-" + offper + "%)";
+				rBox1.style.transform = "translateX(" + offper + "%)";
+			}
