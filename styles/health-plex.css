@@ -1,5 +1,6 @@
 body{
      background-color: #FFFFFF;
+     /* border: 15px solid #511723; */
  }
 
  p {
@@ -12,16 +13,30 @@ body{
  h4 {
    font-size: 16px;
    font-weight: 500;
-   color: #DEC58B;
- }
-
- h5 {
-   color: #000000;
  }
 
 /* NAVIGATION */
  .links-container .navbar-link {
      color: #462B38;
+ }
+
+ button {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-style: "lato";
+    font-weight: 300;
+    border: 2px solid #2F4D55;
+ }
+
+ button:hover {
+   background-color: #2F4D55;
+   color: #FFFFFF;
  }
 
 /* HERO */
@@ -39,7 +54,6 @@ body{
     letter-spacing: 0.5rem;
     z-index: -1;
   }
-
   #hero-content h4 {
     font-size: 18px;
     font-weight: 300;
@@ -47,39 +61,36 @@ body{
   }
 
 /* OVERVIEW SECTION */
-    .intro {
-      position: relative;
-      z-index: 1;
-      margin-top: 5%;
-      margin-bottom: 5%;
-    }
+  .intro {
+    position: relative;
+    z-index: 1;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .intro .photo {
+    position: relative;
+    max-width: 85%;
+    margin-left: 20%;
+    padding-right: 5%;
+    padding-top: 5%;
+    align-items: center;
 
-    .intro .photo {
-      position: relative;
-      max-width: 85%;
-      margin-left: 20%;
-      padding-right: 5%;
-      padding-top: 5%;
-      align-items: center;
-
-    }
-
-    .intro h4 {
-      position: relative;
-      max-width: 100%;
-      margin-right: 40%;
-      padding-left: 5%;
-      font-size: 16px;
-      font-weight: 500;
-      color: #DEC58B;
-    }
-
-    .intro p {
-      position: relative;
-      max-width: 100%;
-      margin-right: 40%;
-      padding-left: 5%;
-    }
+  }
+  .intro h4 {
+    position: relative;
+    max-width: 100%;
+    margin-right: 40%;
+    padding-left: 5%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #DEC58B;
+  }
+  .intro p {
+    position: relative;
+    max-width: 100%;
+    margin-right: 40%;
+    padding-left: 5%;
+  }
 
 /* RESEARCH SECTION */
     .research-containter {
@@ -87,12 +98,10 @@ body{
       width: 100%;
       padding-bottom: 5%;
     }
-
     .research-containter h5{
       margin-left: 20%;
       margin-bottom: 10px;
     }
-
     .research-title {
       position: relative;
       width: 100%;
@@ -102,7 +111,6 @@ body{
       color: #000000;
       letter-spacing: 0.3rem;
     }
-
     .research-title h4 {
       text-align: left;
       margin-left: 20%;
@@ -111,7 +119,6 @@ body{
       color: #000000;
       font-weight: 300;
     }
-
     .research-title p {
       letter-spacing: 0rem;
       margin-left: 20%;
@@ -119,13 +126,13 @@ body{
       margin-top: 30px;
     }
 
+  /* RESEARCH COLUMN */
     .research {
       position: relative;
       z-index: 1;
       margin-top: 30px;
       margin-bottom: 5%;
     }
-
     .research h4 {
       position: relative;
       max-width: 100%;
@@ -134,14 +141,19 @@ body{
       font-weight: 500;
       color: #DEC58B;
     }
+    .research p {
+      position: relative;
+      max-width: 100%;
+      margin-left: 40%;
+    }
 
+  /* PAIN POINTS COLUMN */
     .pain {
       position: relative;
       z-index: 1;
       margin-top: 30px;
       margin-bottom: 5%;
     }
-
     .pain h4 {
       position: relative;
       max-width: 100%;
@@ -151,7 +163,6 @@ body{
       font-weight: 500;
       color: #DEC58B;
     }
-
     .pain p {
       position: relative;
       max-width: 100%;
@@ -159,61 +170,135 @@ body{
       padding-left: 5%;
     }
 
-
-    ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* USERS AND PERSONAS COLUMN */
+    .personas-title {
+      position: relative;
+      width: 100%;
+      opacity:1;
+      background-position: center center;
+      background-size: cover;
+      color: #000000;
+    }
+    .personas-title h4 {
+      text-align: left;
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-top: 5px;
+      color: #DEC58B;
+      font-weight: 500;
+    }
+    .personas-title p {
+      letter-spacing: 0rem;
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-top: 30px;
+    }
+    .personas-images {
+      position: relative;
+      padding-left: 20%;
+    }
+    .personas-photo {
+      width: 5%;
+      padding-right: .5rem;
+      padding-top: 1rem;
     }
 
-    .research p {
+
+/* REBRAND SECTION */
+    .branding-title {
+      position: relative;
+      width: 100%;
+      opacity:1;
+      background-position: center center;
+      background-size: cover;
+      color: #000000;
+      letter-spacing: 0.3rem;
+    }
+    .branding-title h4 {
+      text-align: left;
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-top: 5px;
+      margin-bottom:
+      color: #000000;
+      font-weight: 300;
+    }
+    .brand {
+      margin-bottom: 5%;
+    }
+    .brand h4 {
       position: relative;
       max-width: 100%;
       margin-left: 40%;
-
+      padding-right: 5%;
+      font-size: 16px;
+      font-weight: 500;
+      color: #DEC58B;
+      letter-spacing: .0rem;
+    }
+    .brand p {
+      letter-spacing: 0rem;
+      margin-left: 40%;
+      margin-top: 30px;
     }
 
+/* DESIGN SECTION */
+.design-title {
+  position: relative;
+  width: 100%;
+  opacity:1;
+  background-position: center center;
+  background-size: cover;
+  color: #000000;
+  letter-spacing: 0.3rem;
+}
+.design-title h4 {
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5px;
+  color: #000000;
+  font-weight: 300;
+}
+.design-title p {
+  letter-spacing: 0rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 30px;
+}
 
-    .findings {
-      position: relative;
-      vertical-align: middle;
-      background-size: cover;
-      background-color:#511723
-    }
+.subtitles h4 {
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5px;
+  color: #DEC58B;
+  font-weight: 500;
+  letter-spacing: 0;
 
-    .findings p {
-      color: #FFFFFF;
-      font-weight: 100;
-    }
+}
 
-    .table {
-      margin-left: 10%;
-      margin-right: 10%;
-    }
+.design-image{
+  text-align: center;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    th, td {
-    padding: 20px;
-    }
-
-    .point-title {
-      text-align: left;
-      font-style: "lato", sans-serif;
-      font-size: 36px;
-      margin-bottom: 0px;
-    }
-
-    /* .feedback{
-      width: 100%;
-      color: #511723;
-      margin-left: 0px;
-      background-color: #511723;
-
-    } */
+  #prototype {
+    background-color: #f5f5f5;
+  }
+  #prototype-button {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 
 @media (min-width: 640px) {
-    /* .research-containter {
-      position: relative; */
+
     }
 
 
@@ -236,6 +321,8 @@ body{
   .column.fourth { width: 25%; }
   .column.flow-opposite { float: right; }
   }
+
+  
 
  /* .panel {
    height: 100%;

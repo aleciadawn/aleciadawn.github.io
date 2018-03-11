@@ -1,5 +1,6 @@
 body {
      background-color: #2F4D55;
+
  }
 
  #hero-content {
@@ -8,7 +9,6 @@ body {
      width: auto;
      opacity:1;
      text-align: center;
-     background-color: #2F4D55;
      background-repeat: no-repeat;
      background-position: center center;
      background-size: cover;
@@ -56,12 +56,10 @@ body {
 
  .about {
    padding: 5%;
-   background-color: #2F4D55;
    z-index: 1;
  }
  .point {
    padding: 5%;
-   background-color: #2F4D55;
    z-index: 1;
  }
 
