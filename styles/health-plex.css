@@ -1,0 +1,247 @@
+body{
+     background-color: #FFFFFF;
+ }
+
+ p {
+   font-size: 16px;
+   line-height: 1.5rem;
+   font-weight: 300;
+   color: #000000;
+ }
+
+ h4 {
+   font-size: 16px;
+   font-weight: 500;
+   color: #DEC58B;
+ }
+
+ h5 {
+   color: #000000;
+ }
+
+/* NAVIGATION */
+ .links-container .navbar-link {
+     color: #462B38;
+ }
+
+/* HERO */
+  #hero-content {
+    position: relative;
+    width: 100%;
+    opacity:1;
+    padding: 10%;
+    background-color: #f5f5f5;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    z-index: -1;
+  }
+
+  #hero-content h4 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000000;
+  }
+
+/* OVERVIEW SECTION */
+    .intro {
+      position: relative;
+      z-index: 1;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+
+    .intro .photo {
+      position: relative;
+      max-width: 85%;
+      margin-left: 20%;
+      padding-right: 5%;
+      padding-top: 5%;
+      align-items: center;
+
+    }
+
+    .intro h4 {
+      position: relative;
+      max-width: 100%;
+      margin-right: 40%;
+      padding-left: 5%;
+      font-size: 16px;
+      font-weight: 500;
+      color: #DEC58B;
+    }
+
+    .intro p {
+      position: relative;
+      max-width: 100%;
+      margin-right: 40%;
+      padding-left: 5%;
+    }
+
+/* RESEARCH SECTION */
+    .research-containter {
+      position: relative;
+      width: 100%;
+      padding-bottom: 5%;
+    }
+
+    .research-containter h5{
+      margin-left: 20%;
+      margin-bottom: 10px;
+    }
+
+    .research-title {
+      position: relative;
+      width: 100%;
+      opacity:1;
+      background-position: center center;
+      background-size: cover;
+      color: #000000;
+      letter-spacing: 0.3rem;
+    }
+
+    .research-title h4 {
+      text-align: left;
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-top: 5px;
+      color: #000000;
+      font-weight: 300;
+    }
+
+    .research-title p {
+      letter-spacing: 0rem;
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-top: 30px;
+    }
+
+    .research {
+      position: relative;
+      z-index: 1;
+      margin-top: 30px;
+      margin-bottom: 5%;
+    }
+
+    .research h4 {
+      position: relative;
+      max-width: 100%;
+      margin-left: 40%;
+      font-size: 16px;
+      font-weight: 500;
+      color: #DEC58B;
+    }
+
+    .pain {
+      position: relative;
+      z-index: 1;
+      margin-top: 30px;
+      margin-bottom: 5%;
+    }
+
+    .pain h4 {
+      position: relative;
+      max-width: 100%;
+      margin-right: 40%;
+      padding-left: 5%;
+      font-size: 16px;
+      font-weight: 500;
+      color: #DEC58B;
+    }
+
+    .pain p {
+      position: relative;
+      max-width: 100%;
+      margin-right: 40%;
+      padding-left: 5%;
+    }
+
+
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    .research p {
+      position: relative;
+      max-width: 100%;
+      margin-left: 40%;
+
+    }
+
+
+    .findings {
+      position: relative;
+      vertical-align: middle;
+      background-size: cover;
+      background-color:#511723
+    }
+
+    .findings p {
+      color: #FFFFFF;
+      font-weight: 100;
+    }
+
+    .table {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    th, td {
+    padding: 20px;
+    }
+
+    .point-title {
+      text-align: left;
+      font-style: "lato", sans-serif;
+      font-size: 36px;
+      margin-bottom: 0px;
+    }
+
+    /* .feedback{
+      width: 100%;
+      color: #511723;
+      margin-left: 0px;
+      background-color: #511723;
+
+    } */
+
+
+@media (min-width: 640px) {
+    /* .research-containter {
+      position: relative; */
+    }
+
+
+    .feedback-column-fourth {
+      width: 25%;
+      float: left;
+      color: #511723;
+
+    }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 1024px) {
+  html { font-size: 120%; }
+
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 25%; }
+  .column.flow-opposite { float: right; }
+  }
+
+ /* .panel {
+   height: 100%;
+   width: 100%;
+ }
+
+ .panel.green {
+   margin-bottom: 400px
+ } */

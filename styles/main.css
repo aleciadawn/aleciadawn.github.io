@@ -23,16 +23,46 @@ body {
    h1 {
      font-family: 'Nanum Myeongjo', serif;
      font-weight: 300;
-     font-size: 96px;
+     font-size: 72px;
      font-style: normal;
+
    }
 
    h2 {
-     font-family: 'Nanum Myeongjo', sans-serif;
+     font-family: 'Nanum Myeongjo', serif;
      font-weight: 300;
-     font-size: 28px;
+     font-size: 56px;
      font-style: normal;
    }
+
+   h3 {
+     font-family: 'Lato', sans-serif;
+     font-weight: 300;
+     font-size: 56px;
+     font-style: normal;
+   }
+
+   h4 {
+      font-family: 'Lato', sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+    }
+
+    h5 {
+      font-family: 'Nanum Myeongjo', serif;
+      font-weight: 300;
+      font-size: 32px;
+      font-style: normal;
+
+    }
+
+    h6 {
+       font-family: 'Nanum Myeongjo', sans-serif;
+       font-style: normal;
+       font-weight: 300;
+       font-size: 24px;
+     }
 
  /* 18PX | REGULAR PARAGRAPH | THIN */
    p {
@@ -40,13 +70,20 @@ body {
       font-style: normal;
       font-weight: 100;
       font-size: 20px;
-      line-height: 1.7rem;
+      line-height: 1.5rem;
 }
 
+  hr {
+    margin-left: 20%;
+    margin-right: 20%;
+    border-width: .5px;
+
+  }
 
   .navbar {
     position: fixed;
     top: 10%;
+    right: 10%;
     width: 100%;
     text-align: right;
     background-color: transparent;
@@ -84,25 +121,9 @@ body {
      cursor: pointer;
  }
 
-   /* #5 */
  .links-container .navbar-link:hover {
-
-   /*transform: rotate(180deg);*/
-
-    -moz-transform: scale(1, -1);
-     -webkit-transform: scale(1, -1);
-     -o-transform: scale(1, -1);
-     -ms-transform: scale(1, -1);
-     transform: scale(1, -1);
+     text-decoration: line-through;
  }
-
-
-
- .links-container .navbar-link:active {
-     color: rgb(233,50,117);
-     background-color: white;
- }
-    }
 
     .container {
       margin: 0 auto;
@@ -118,23 +139,16 @@ body {
      max-width: 56rem;
  }
 
- .footer {
-   position: relative;
-   width: 100%;
-   background-color: #3F6556;
-   z-index: 10;
-   }
-
-   .footer .links-container {
-       display: table;
+   /* .footer {
        position: relative;
-       bottom: 10%;
-       font-family: 'freight-sans-pro', sans-serif;
+       position: absolute;
+       width: 100%;
+       font-family: 'lato', sans-serif;
        font-weight: 100;
-       background-color: #3F6556;
-       height: 50px;
+       font-size: 10px;
+       height: 10%;
        color: white;
-   }
+   } */
 
 /* Medium & small screens (640px) */
 @media (min-width: 640px) {
