@@ -171,6 +171,10 @@ body{
     }
 
 /* USERS AND PERSONAS COLUMN */
+    .users {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
     .personas-title {
       position: relative;
       width: 100%;
@@ -181,24 +185,20 @@ body{
     }
     .personas-title h4 {
       text-align: left;
-      margin-left: 20%;
-      margin-right: 20%;
       margin-top: 5px;
       color: #DEC58B;
       font-weight: 500;
     }
     .personas-title p {
       letter-spacing: 0rem;
-      margin-left: 20%;
-      margin-right: 20%;
       margin-top: 30px;
     }
     .personas-images {
       position: relative;
-      padding-left: 20%;
+      padding-left: 10%;
     }
     .personas-photo {
-      width: 5%;
+      width: 8%;
       padding-right: .5rem;
       padding-top: 1rem;
     }
@@ -296,6 +296,42 @@ body{
     margin-right: auto;
   }
 
+   .next-case-study {
+     position: relative;
+     width: 100%;
+     opacity:1;
+     background-position: center center;
+     background-size: cover;
+     text-align: center;
+     color: #000000;
+   }
+
+   .next-case-study h4{
+     color: #DEC58B;
+     margin-top: 2rem;
+     margin-bottom: 1rem;
+   }
+
+   .next-case-study h5{
+     margin-top: 1rem;
+     margin-bottom: 2rem;
+   }
+
+
+  .footer p{
+    color:#FFFFFF;
+    text-align: right;
+    margin-right: 10%;
+    font-weight: 100;
+  }
+
+  .contact p{
+    color:#FFFFFF;
+    font-weight: 100;
+    float: none;
+    text-align: center;
+    margin-right: 10%
+  }
 
 @media (min-width: 640px) {
 
@@ -321,8 +357,6 @@ body{
   .column.fourth { width: 25%; }
   .column.flow-opposite { float: right; }
   }
-
-  
 
  /* .panel {
    height: 100%;
