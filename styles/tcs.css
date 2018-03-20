@@ -1,0 +1,161 @@
+body {
+   background-color: #FFFFFF;
+   color: #32323B;
+   margin:0;
+ }
+
+ h2 {
+   margin-bottom: 10px;
+ }
+
+ h4 {
+   font-size: 18px;
+   letter-spacing: .2rem;
+   margin-bottom: 30px;
+   margin-top: 0px;
+ }
+
+  h5 {
+    margin-bottom: 10px;
+  }
+
+ p {
+   font-size: 16px;
+   line-height: 1.5rem;
+   font-weight: 300;
+   color: #32323B;
+   margin-top: 0px;
+ }
+
+ button {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-style: "lato";
+    font-weight: 300;
+    border: 2px solid #7AD2FA;
+    color:#7AD2FA;
+ }
+
+ button:hover {
+   background-color: #7AD2FA;
+   color: #FFFFFF;
+ }
+
+ ul {
+    padding: 0;
+    list-style-type: none;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+ .margin {
+   margin-left: 5%;
+   margin-right:5%;
+   }
+
+ section {
+   padding-top: 5%;
+   padding-bottom: 5%;
+ }
+
+
+/* NAVIGATION */
+  #navbar {
+    background-color: #F8E71C;
+  }
+/* HERO */
+  #hero-content {
+    position: relative;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    background-size: cover;
+    text-align: center;
+    z-index: -1;
+    }
+
+  #hero-content h1 {
+    margin: 0;
+  }
+
+  #hero-content h4 {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+
+  #projects {
+    position: relative;
+    padding: 10%;
+    opacity:1;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .case {
+    position: relative;
+    width: 100%;
+  }
+
+  .thumbnail {
+    border: solid #FFFFFF 5px;
+  }
+
+  .thumbnail:hover {
+   -webkit-transform: rotate(4deg); /* Safari */
+   transform: rotate(4deg);
+  }
+
+  .overlay p {
+    text-align: center;
+  }
+
+@media (min-width: 640px) {
+
+  .margin {
+    margin-left: 20%;
+    margin-right:20%;
+    }
+
+    .intro .photo {
+      max-width: 140%;
+      margin-left: -40%;
+    }
+
+    .brand .photo {
+      max-width: 140%;
+    }
+  }
+
+  #map  p {
+    position: absolute;
+    max-width: 500px;
+  }
+
+    .feedback-column-fourth {
+      width: 25%;
+      float: left;
+      color: #511723;
+
+    }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 1024px) {
+  html { font-size: 120%; }
+
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 25%; }
+  .column.flow-opposite { float: right; }
+  }

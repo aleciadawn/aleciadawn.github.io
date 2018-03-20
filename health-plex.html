@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Case Study: Health Plex</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100,300|Nanum+Myeongjo:400,800">
-  <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-  <link rel="stylesheet" type="text/css" href="styles/health-plex.css">
-</head>
+  <head>
+    <title>Case Study: Health Plex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100,300|Nanum+Myeongjo:400,800">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/health-plex.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
 
-<body>
-  <nav class="navbar"> <!--navitation bar -->
-    <div class="links-container">
-      <a href="index.html" class="navbar-link">ABOUT</a>
-      <a href="my-work.html" class="navbar-link">WORK</a>
-      <a href="assets/AleciaMcMahon_Resume.pdf" class="navbar-link">CV</a>
-    </div>
-  </nav>
+  <body>
+  <div class="clearfix">
+      <div class="home">
+        <a href="index.html"><img src= "assets/icons/Home.png" alt="Home" style="width:35px">
+      </div>
+      <div class="email">
+        <a href="mailto:alecia@aleciadawn.co"><p>alecia@aleciadawn.co</p></a>
+      </div>
 
-  <div id="hero-content"> <!-- hero content -->
-    <img src= "assets/icons/icons8-dumbbell.png" alt="-" style="width:2%;">
-      <h2> HEALTH PLEX FITNESS CENTER </h2>
+    <nav class="navbar" id="navbar"> <!-- bottom navigation -->
+      <div class="links-container">
+        <a href="index.html" class="navbar-link">HOME</a>
+        <a href="#projects" class="navbar-link scroll active">(more) PROJECTS</a>
+        <a href="assets/AleciaMcMahon_Resume.pdf" class="navbar-link">CV</a>
+      </div>
+    </nav>
+
+<section class="margin">
+    <div id="hero-content"> <!-- hero content -->
+      <!-- <img src= "assets/icons/icons8-dumbbell.png" alt="-" style="width:2%;"> -->
+      <h1> HEALTH PLEX FITNESS CENTER </h1>
       <h4> WEB DESIGN & DEVELOPMENT | REBRANDING </h4>
-  </div>
+      <p>The client was a local gym looking to modernize their website and branding.
+        The were looking for a cleaner, easy-to-use, research-based website that would help drive
+        membership and appeal to a younger audience.
+      </p>
+      <img src= "assets/icons/icons8-arrows_long_down.png" alt="Scroll Down" style="width:9%">
+    </div>
 
-  <section> <!--intro to project -->
-      <div class="clearfix">
+  <hr> <!--seperator line-->
 
+    <section id="overview"> <!--intro to project -->
       <div class="intro column half">   <!--image half-->
         <img src= "assets/images/healthplex-hero.png" alt=" Main Photo" class="photo">
       </div>
 
       <div class="intro column half"> <!--text half -->
-        <h4>DESCRIPTION</h4>
-        <p>The client was a local gym looking to modernize their website and branding. The were looking for a cleaner, easy-to-use, research-based website that would help drive membership and appeal to a younger audience.
+        <h5>ROLE</h5>
+        <p>UX & UI  Designer | Developer
         </p>
 
-        <h4>SOFTWARE</h4>
-        <p>Google Surveys, Balsamiq, Photoshop, Illustrator, Sketch, InVision</p>
+        <h5>SOFTWARE</h5>
+        <p>Google Surveys, Balsamiq, Photoshop, Illustrator, Sketch, InVision
+        </p>
 
-        <h4>PROCESS</h4>
+        <h5>PROCESS</h5>
         <p>
         <b>Research:</b> User Surveys, Personas, User Stories<br>
         <b>Branding:</b> Logo Redesign, Style Guide<br>
@@ -47,229 +63,230 @@
         <b>Testing:</b> InVision Prototype & Usability Tests
         </p>
       </div>
+      <div class="clear"></div>
+    </section>
+
+  <hr> <!--seperator line-->
+
+    <section class="research-containter" id="research"> <!-- research section -->
+
+      <div class="research-title"> <!--paragraph-->
+        <h2>RESEARCH</h2>
+        <h4>USER SURVEYS & INTERVIEWS | PERSONAS | USER STORIES</h4>
+        <p>The first step in the process was discussing goals and limitations of the client.
+          Next, I sent out a survey to both members and non-members. The survey received resoponses from 12 non-members and six members. Of the non-members surveyed, three did not have any type of gym membership. Based on the findings of the survey along with 3 personal interviews, I anazlyzed the original site to identify the main pain pain points the client was experiencing with their site and made sure to prioritze those points through the remander of my design process
+        </p>
+      </div>
+
+      <section> <!--findings from the survey + pain points -->
+        <div class="research column half"> <!--left half -->
+          <h5>RESEARCH HIGHLIGHTS</h5>
+          <ul>
+            <li>
+              <div class="point-description">
+                <p>
+                  <b>74%</b> of members surveyed highlighted staff as one of their favorite aspects of the health club.
+                </p>
+              </div>
+            </li>
+          <br> <!--BREAK -->
+            <li>
+              <div class="point-description">
+                <p>
+                  <b>83%</b> of users noted facility cleanliness as one of their top priorities when chosing a fitness facility.
+                </p>
+              </div>
+            </li>
+          <br> <!--BREAK -->
+            <li>
+              <div class="point-description">
+                <p>
+                <b>56% </b> of users surveyed claimed a modern facility and equipment were among their top three priorities when deciding to join a gym.
+                </p>
+              </div>
+            </li>
+          <br> <!--BREAK -->
+            <li>
+              <div class="point-description">
+                <p>
+                  <b>100%</b> of users said they would consider switching gyms based on reviews and/or friend recomendations.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="pain column half"> <!--right half -->
+          <h5>PAIN POINTS</h5>
+          <ul>
+            <li>
+              <div class="point-description">
+                <p>
+                  The original site was missing a staff page and didn't contain any information on ownership or staff qualificaitons.
+                </p>
+              </div>
+            </li>
+          <br> <!--BREAK -->
+            <li>
+              <div class="point-description">
+                <p>
+                  The original site lacked a variety of photos, especially of high concern areas such as locker rooms, sauna, etc.
+                </p>
+              </div>
+            </li>
+          <br> <!--BREAK -->
+            <li>
+              <div class="point-description">
+                <p>
+                 In addition to a lack of photo variety, the original photos were dated, not accuratly reflecting the facitly.
+                </p>
+              </div>
+            </li>
+          <br> <!--BREAK -->
+            <li>
+              <div class="point-description">
+                <p>
+                  Despite the signifcant number of positive reviews on Google, Yelp, and Facebook, there were no testimonials quoted or linked on the website.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </section>
+
+      <section class="users"> <!--personas and flows -->
+        <div class="personas-title"> <!--paragraph-->
+          <h5>PERSONAS | USER STORIES</h5>
+          <p>
+            Once the feedback and analysis was done, it was time to move on to creating personas based on the survey.
+            Based on the survey results I created 5 outlines of user personas and then interviewed real people to check my work and add details to the characters I created.
+            My priority was to understand each user's motiation to go to the gym, and how my site design could increase the chances of them not only joining, but continue to show up and stay long-term members.
+            After creating the personas, I outlined user stories to meet the needs of each personas, prioritizing the needs that overlapped the most.
+          </p>
+        </div>
+        <div class"personas-images">
+          <img src= "assets/images/The Addict.png" alt="The Addict" class="personas-photo">
+          <img src= "assets/images/GymBro.png" alt="GymBro" class="personas-photo">
+          <img src= "assets/images/Passerby.png" alt="Passerby" class="personas-photo">
+          <img src= "assets/images/Regular.png" alt="Regular" class="personas-photo">
+          <img src= "assets/images/Rookie.png" alt="Rookie" class="personas-photo">
+        </div>
+        <div class="clear"></div>
+      </section>
+      <div class="clear"></div>
+    </section>
+
+  <hr> <!--seperator line-->
+
+    <section class="research-containter"> <!-- research section -->
+      <div class="branding-title" id="branding"> <!--paragraph-->
+        <h2>BRANDING</h2>
+        <h4>LOGO REDESIGN | STYLE GUIDE</h4>
+
+        <div class="brand column half"> <!--text half -->
+          <h5>TYPOGRAPHY</h5>
+          <p>I wanted to pair a strong powerful typeface with a clean and modern one. I chose to pair Abolition with Monsterrat Extra Light.
+          </p>
+
+          <h5>COLOR PALETTE</h5>
+          <p>I chose the color palette based on the old logo which is still on the sign outside of the gym. Black is the predominant color of the site with the others following as accent colors.
+          </p>
+
+          <h5>LOGO</h5>
+          <p>
+          Similar to the color palette, the logo design was a modernization of the previous logo.
+          I opted to stick with a slab-serif as a nod to the 1980s origin of the gym.
+          I went with a thin, wide, italicized font for "fitness center" to contrast the powerful boldness of "Health Plex".
+          </p>
+        </div>
+
+        <div class="brand column half">   <!--image half-->
+          <img src= "assets/images/portfolio_style_layout.png" alt=" Main Photo" class="photo">
+        </div>
+      </div>
+      <div class="clear"></div>
+    </section>
+
+  <hr> <!--seperator line-->
+
+  <section class="design" id="design"> <!-- design overview -->
+    <div class="design-title"> <!--paragraph-->
+      <h2>DESIGN</h2>
+      <h4>USER FLOWS | WIREFRAMES | MOCKUP</h4>
+
+      <div class="subtitles"> <!--paragraph-->
+        <h5> SOFTWARE: BALSAMIQ & SKETCH </h5>
+        <p>
+          Prior to designing the pages, I sketched out a site map with the user flow on paper.
+          I used color coding to identify the user interaction with the sitemap, and highlighted the top page priorities based on the user research.
+          The low-fidelity wireframes were created using Balsamiq, and once I had those complete, I moved on to incorporate the style guide and created high-fidelity wireframes using Sketch.
+        </p>
+      </div>
+
+      <img src= "assets/images/design-image.png" alt=" Wireframe Photo" class="design-image">
+    </div>
+    <div class="clear"></div>
   </section>
 
   <hr> <!--seperator line-->
 
-  <section class="research-containter"> <!-- research section -->
-
-    <div class="research-title"> <!--paragraph-->
-      <h5>RESEARCH</h5>
-      <h4>USER SURVEYS & INTERVIEWS | PERSONAS | USER STORIES</h4>
-      <p>The first step in the process was discussing goals and limitations of the client.
-        Next, I sent out a survey to both members and non-members. The survey received resoponses from 12 non-members and six members. Of the non-members surveyed, three did not have any type of gym membership. Based on the findings of the survey along with 3 personal interviews, I anazlyzed the original site to identify the main pain pain points the client was experiencing with their site and made sure to prioritze those points through the remander of my design process
-      </p>
-    </div>
-
-    <section> <!--findings from the survey + pain points -->
-        <div class="clearfix">
-          <div class="research column half"> <!--left half -->
-            <h4>RESEARCH HIGHLIGHTS</h4>
-            <ul>
-              <li>
-                <div class="point-description">
-                  <p>
-                    <b>74%</b> of members surveyed highlighted staff as one of their favorite aspects of the health club.
-                  </p>
-                </div>
-              </li>
-            <br> <!--BREAK -->
-              <li>
-                <div class="point-description">
-                  <p>
-                    <b>83%</b> of users noted facility cleanliness as one of their top priorities when chosing a fitness facility.
-                  </p>
-                </div>
-              </li>
-            <br> <!--BREAK -->
-              <li>
-                <div class="point-description">
-                  <p>
-                  <b>56% </b> of users surveyed claimed a modern facility and equipment were among their top three priorities when deciding to join a gym.
-                  </p>
-                </div>
-              </li>
-            <br> <!--BREAK -->
-              <li>
-                <div class="point-description">
-                  <p>
-                    <b>100%</b> of users said they would consider switching gyms based on reviews and/or friend recomendations.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="pain column half"> <!--right half -->
-            <h4>PAIN POINTS</h4>
-            <ul>
-              <li>
-                <div class="point-description">
-                  <p>
-                    The original site was missing a staff page and didn't contain any information on ownership or staff qualificaitons.
-                  </p>
-                </div>
-              </li>
-            <br> <!--BREAK -->
-              <li>
-                <div class="point-description">
-                  <p>
-                    The original site lacked a variety of photos, especially of high concern areas such as locker rooms, sauna, etc.
-                  </p>
-                </div>
-              </li>
-            <br> <!--BREAK -->
-              <li>
-                <div class="point-description">
-                  <p>
-                   In addition to a lack of photo variety, the original photos were dated, not accuratly reflecting the facitly.
-                  </p>
-                </div>
-              </li>
-            <br> <!--BREAK -->
-              <li>
-                <div class="point-description">
-                  <p>
-                    Despite the signifcant number of positive reviews on Google, Yelp, and Facebook, there were no testimonials quoted or linked on the website.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-    </section>
-
-    <section class="users"> <!--personas and flows -->
-        <div class="clearfix">
-
-          <div class="personas-title"> <!--paragraph-->
-            <h4>PERSONAS | USER STORIES</h4>
-            <p>
-              Once the feedback and analysis was done, it was time to move on to creating personas based on the survey.
-              Based on the survey results I created 5 outlines of user personas and then interviewed real people to check my work and add details to the characters I created.
-              My priority was to understand each user's motiation to go to the gym, and how my site design could increase the chances of them not only joining, but continue to show up and stay long-term members.
-              After creating the personas, I outlined user stories to meet the needs of each personas, prioritizing the needs that overlapped the most.
-            </p>
-          </div>
-          <div class"personas-images">
-            <img src= "assets/images/The Addict.png" alt="The Addict" class="personas-photo">
-            <img src= "assets/images/GymBro.png" alt="GymBro" class="personas-photo">
-            <img src= "assets/images/Passerby.png" alt="Passerby" class="personas-photo">
-            <img src= "assets/images/Regular.png" alt="Regular" class="personas-photo">
-            <img src= "assets/images/Rookie.png" alt="Rookie" class="personas-photo">
-          </div>
-
-    </section>
-
-  </section>
-
-
-<hr>
-
-
-  <section class="research-containter"> <!-- research section -->
-    <div class="branding-title"> <!--paragraph-->
-      <h5>BRANDING</h5>
-      <h4>LOGO REDESIGN | STYLE GUIDE</h4>
-
-      <div class="brand column half"> <!--text half -->
-        <h4>TYPOGRAPHY</h4>
-        <p>I wanted to pair a strong powerful typeface with a clean and modern one. I chose to pair Abolition with Monsterrat Extra Light.
-        </p>
-
-        <h4>COLOR PALETTE</h4>
-        <p>I chose the color palette based on the old logo which is still on the sign outside of the gym. Black is the predominant color of the site with the others following as accent colors.
-        </p>
-
-        <h4>LOGO</h4>
+    <section class="research-containter"> <!-- conclusion and prototype section -->
+      <div class="research-title" id="prototype"> <!--paragraph-->
+        <h2>CONCLUSION</h2>
+        <h4>PROTOTYPING | USER TESTING | DEVELOPMENT</h4>
         <p>
-        Similar to the color palette, the logo design was a modernization of the previous logo.
-        I opted to stick with a slab-serif as a nod to the 1980s origin of the gym.
-        I went with a thin, wide, italicized font for "fitness center" to contrast the powerful boldness of "Health Plex".
+          I used InVision to create a site prototype and observed users navigating the site. I began the observation with the following prompt:
+          <br></br>
+          <b>"Pretend you hav just moved to a new city and are looking to join a gym, use this site to determine whether you would consider this gym as a top contender."</b>
+          <br></br>
+          After taking notes of their first moves I checked to see if their priorities aligned with the researhc done at the beginning of the process.
+          Then, I had each user move through tasks I created from the user flows. Here are some examples of tasks I asked of the users:
+          <br></br>
+            <b>1. "Identify a fitness class you would like to attend and tell me how much it would cost you if you attended as a member."</b>
+            <br>
+            <b>2. "Tell me if the cost of membership is in your price range"</b>
+            <br>
+            <b>3. "You are hoping to hire a personal trainer, how would you go about getting a trainer from this gym"</b>
+            <br>
+            <b>4. "Sign-up for a free-trial."</b>
+            <br></br>
+
+          Overall, the feedback was positive. There were a few minor design changes which included resdesigning a couple pieces of content that a few users thought were buttons when they were not.
         </p>
       </div>
-    </div>
-
-    <div class="brand column half">   <!--image half-->
-      <img src= "assets/images/healthplex-hero.png" alt=" Main Photo" class="photo">
-    </div>
+      <div class="invision">
+        <a href="https://invis.io/SUEASPQNG#/262112509_Home"><button type="button" id="prototype-button">VIEW PROTOTYPE</button></a>
+        <div class="clear"></div>
+      </div>
+    </section>
   </section>
-<hr>
-<section class="research-containter"> <!-- research section -->
-  <div class="design-title"> <!--paragraph-->
-    <h5>DESIGN</h5>
-    <h4>USER FLOWS | WIREFRAMES | MOCKUP</h4>
 
-    <div class="subtitles"> <!--paragraph-->
-      <h4> SOFTWARE: BALSAMIQ & SKETCH </h4>
-      <p>
-        Prior to designing the pages, I sketched out a site map with the user flow on paper.
-        I used color coding to identify the user interaction with the sitemap, and highlighted the top page priorities based on the user research.
-        The low-fidelity wireframes were created using Balsamiq, and once I had those complete, I moved on to incorporate the style guide and created high-fidelity wireframes using Sketch.
-      </P>
-    </div>
+  <section id="projects"> <!--project thumbnails -->
+    <h2>PROJECTS</h2>
+      <div class="case column column-left third">
+        <a href="health-plex.html"><img src= "assets/images/health-plex.png" alt="Health Plex Fitness Center" style="width:100%" class="thumbnail"></a>
+          <div class="overlay">
+            <div class="text"><p>HEATH PLEX FITNESS CENTER</p></div>
+          </div>
+      </div>
 
-    <img src= "assets/images/design-image.png" alt=" Wireframe Photo" class="design-image">
+      <div class="case column column-center third">
+        <a href="blocbox.html"><img src= "assets/images/blocbox.png" alt="Blocbox" style="width:100%" class="thumbnail"></a>
+          <div class="overlay">
+            <div class="text"><p>BLOCBOX<p></div>
+          </div>
+      </div>
+
+      <div class="case column column-right third">
+        <a href="tcs.html"><img src= "assets/images/TCS.png" alt="True Career Solutions" style="width:100%" class="thumbnail"></a>
+          <div class="overlay">
+            <div class="text"><p>TRUE CAREER SOLUTIONS</p></div>
+          </div>
+      </div>
+      <div class="clear"></div>
+  </section>
+
   </div>
-</section>
-
-<hr>
-
-<section class="research-containter"> <!-- research section -->
-  <div class="research-title"> <!--paragraph-->
-    <h5>CONCLUSION</h5>
-    <h4>PROTOTYPING | USER TESTING | DEVELOPMENT</h4>
-    <p>
-      I used InVision to create a site prototype and observed users navigating the site. I began the observation with the following prompt:
-      <br></br>
-      <b>"Pretend you hav just moved to a new city and are looking to join a gym, use this site to determine whether you would consider this gym as a top contender."</b>
-      <br></br>
-      After taking notes of their first moves I checked to see if their priorities aligned with the researhc done at the beginning of the process.
-      Then, I had each user move through tasks I created from the user flows. Here are some examples of tasks I asked of the users:
-      <br></br>
-        <b>1. "Identify a fitness class you would like to attend and tell me how much it would cost you if you attended as a member."</b>
-        <br>
-        <b>2. "Tell me if the cost of membership is in your price range"</b>
-        <br>
-        <b>3. "You are hoping to hire a personal trainer, how would you go about getting a trainer from this gym"</b>
-        <br>
-        <b>4. "Sign-up for a free-trial."</b>
-        <br></br>
-
-      Overall, the feedback was positive. There were a few minor design changes which included resdesign a couple piece of content that a few users thought were buttons when they were not.
-    </p>
-  </div>
-
-  <button type="button" id="prototype-button" onclick="https://invis.io/SUEASPQNG#/262112509_Home">VIEW PROTOTYPE</button>
-</section>
-<br></br>
-<hr>
-<section class="next-case-study" >
-  <h4>
-    NEXT CASE STUDY
-  </h4>
-  <h5>
-    TRUE CAREER SOLUTIONS
-  </h5>
-</section>
-<hr>
-<br></br>
-<br></br>
-<section class="footer">
-  <div class="contact-content">
-  <div class="contact column third">
-    <img src= "assets/icons/icons8-marker.png" alt="FIND ME" class="contact-image"><br>
-    <p>Denver, CO</p>
-  </div>
-  <div class="contact column third">
-    <img src= "assets/icons/icons8-message.png" alt="EMAIL ME" class="contact-image"><br>
-    <p>alecia@aleciadawn.co</p>
-  </div>
-  <div class="contact column third">
-    <img src= "assets/icons/icons8-phone.png" alt="CALL ME" class="contact-image"><br>
-    <p>646.891.6953</p>
-  </div>
-</div>
-  <p>© 2018 ALECIA MCMAHON</p>
-</section>
-
-</body>
+  <script src="./scripts/about-me.js" charset="utf-8"></script>
+  </body>
 </html>

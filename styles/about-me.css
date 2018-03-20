@@ -1,5 +1,6 @@
 body {
      background-color: #2F4D55;
+     
 
  }
 
@@ -55,10 +56,12 @@ body {
 }
 
  .about {
+   position: relative;
    padding: 5%;
    z-index: 1;
  }
  .point {
+   position: relative;
    padding: 5%;
    z-index: 1;
  }

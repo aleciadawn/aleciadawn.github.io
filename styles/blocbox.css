@@ -134,6 +134,34 @@ body {
         font-weight: 300;
       }
 
+      .point-description h2 {
+        color: #F7334A;
+        font-size: 56px;
+        padding-top: 30px;
+
+      }
+
+      .highlights h5 {
+        position:absolute;
+        background: #61DAAA;
+        text-align:left;
+        vertical-align: middle;
+        padding:15px 30px;
+        color: #FFFFFF;
+      }
+
+      #map  h5 {
+        position: relative;
+      }
+
+      #map  p {
+        position: relative;
+      }
+
+      .map-image {
+        max-width: 80%;
+        float:right;
+      }
   /* RESEARCH COLUMN */
     .research {
       position: relative;
@@ -185,6 +213,7 @@ body {
     }
     .personas-images {
       position: relative;
+      bottom: 0px;
     }
     .personas-photo {
       width: 100px;
@@ -192,24 +221,35 @@ body {
       padding-top: 1rem;
     }
 
+    .competitive-photo {
+
+      height:100px;
+      padding-right: .5rem;
+      padding-top: 1rem;
+    }
+
 
 /* REBRAND SECTION */
-    .branding-title {
+    .flows-title {
       position: relative;
       width: 100%;
       opacity:1;
     }
-    .branding-title h4 {
+    .flows-title h4 {
       text-align: left;
       font-weight: 300;
     }
-    .branding-title h2 {
+    .flows-title h2 {
   }
 
-    .branding-title h5 {
+    .flows-title h5 {
     }
 
-    .brand {
+    .flows {
+     background-image: url("Sitemap-user-flow.png");
+     /* background-color: #cccccc; */
+    }
+    /* .brand {
       padding-left: 0;
     }
 
@@ -225,7 +265,7 @@ body {
       font-size: 16px;
       font-weight: 500;
       color: #DEC58B;
-    }
+    } */
 
 
 /* DESIGN SECTION */
@@ -326,6 +366,10 @@ body {
     }
   }
 
+  #map  p {
+    position: absolute;
+    max-width: 500px;
+  }
 
     .feedback-column-fourth {
       width: 25%;
