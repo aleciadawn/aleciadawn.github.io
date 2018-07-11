@@ -261,6 +261,13 @@ body {
   #prototype-button {
     text-align: center;
     display: block;
+    margin: .5rem;
+  }
+
+ #website-button {
+    text-align: center;
+    display: block;
+    margin: .5rem;
   }
 
   .invision {
