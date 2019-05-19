@@ -32,20 +32,14 @@ body {
 
  #hero-title {
      position: relative;
-     max-width: 700px;
-     padding-top: 1000px;
+     max-width: 70vw;
+     padding-top: 20vh;
      padding-left: 1rem;
      padding-right: 1rem;
      margin-left: 10%;
      margin-right: 10%;
-     -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
-     transform: translateY(-50%);
      width: 100%;
      text-align: left;
-     font-size: 3rem;
-     font-weight: 300;
-     text-transform: uppercase;
      letter-spacing: 0;
      z-index: -1;
      text-decoration: none;
