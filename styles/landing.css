@@ -32,8 +32,9 @@ body {
 
  #hero-title {
      position: relative;
+	 height:100vh
      max-width: 70vw;
-     padding-top: 20vh;
+     padding-top: 30vh;
      padding-left: 1rem;
      padding-right: 1rem;
      margin-left: 10%;
@@ -58,7 +59,7 @@ body {
 
    #projects {
      position: relative;
-     background-color: #7AD2FA;
+     background-color: #434343;
      color: #FFFFFF;
      padding: 10%;
      opacity:1;
@@ -112,16 +113,16 @@ body {
      padding-left: 1rem;
      padding-right: 1rem;
      height: 100%;
-     color: #32323B;
+     color: #434343;
      text-align: left;
    }
 
 
  .about {
    position: relative;
-   background-color: #61DAAA;
+   background-color: #434343;
    padding: 10%;
-   color: #32323B;
+   color: #ffffff;
  }
 
  .about h2 {
