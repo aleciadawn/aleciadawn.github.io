@@ -81,8 +81,7 @@ html{
     }
 
       .home:hover{
-        -webkit-transform: rotate(20deg); /* Safari */
-        transform: rotate(20deg);
+          cursor: pointer;
       }
 
     .email {
@@ -134,6 +133,7 @@ html{
 
     .navbar-link:hover {
       text-decoration: line-through;
+         cursor: pointer;
     }
 
     .container {
