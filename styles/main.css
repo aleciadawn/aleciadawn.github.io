@@ -36,7 +36,7 @@ html{
 
     h5 {
       font-family: 'Lato', serif;
-      font-weight: 700;
+      font-weight: 300;
       font-size: 18px;
       font-style: normal;
     }
@@ -44,7 +44,7 @@ html{
    p {
       font-family: 'Lato', sans-serif;
       font-style: normal;
-      font-weight: 100;
+      font-weight: 300;
       font-size: 20px;
       line-height: 1.5rem;
     }
