@@ -313,7 +313,7 @@ body {
 
   #projects {
     position: relative;
-    background-color: #7AD2FA;
+    background-color: #171717;
     color: #FFFFFF;
     padding: 10%;
     opacity:1;
@@ -323,7 +323,7 @@ body {
     background-size: cover;
   }
 
-  #projects h2 {
+  #projects h4 {
     padding: 1rem;
   }
 
