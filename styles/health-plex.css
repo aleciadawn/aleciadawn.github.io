@@ -35,12 +35,12 @@ body {
     font-size: 16px;
     font-style: "lato";
     font-weight: 300;
-    border: 2px solid #7AD2FA;
-    color:#7AD2FA;
+    border: 2px solid #32323B;
+    color:#32323B;
  }
 
  button:hover {
-   background-color: #7AD2FA;
+   background-color: #32323B;
    color: #FFFFFF;
  }
 
@@ -261,6 +261,13 @@ body {
   #prototype-button {
     text-align: center;
     display: block;
+    margin: .5rem;
+  }
+
+ #website-button {
+    text-align: center;
+    display: block;
+    margin: .5rem;
   }
 
   .invision {
@@ -273,7 +280,7 @@ body {
 
   #projects {
     position: relative;
-    background-color: #7AD2FA;
+    background-color: #171717;
     color: #FFFFFF;
     padding: 10%;
     opacity:1;
@@ -283,7 +290,7 @@ body {
     background-size: cover;
   }
 
-  #projects h2 {
+  #projects h4 {
     padding: 1rem;
   }
 
