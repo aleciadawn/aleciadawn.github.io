@@ -1,0 +1,490 @@
+
+@font-face {
+    font-family: 'Mattone-Regular';
+    src: url('../Styles/Fonts/Mattone-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Styles/Fonts/Mattone-Regular.woff') format('woff'), /* Pretty Modern Browsers */;
+    font-weight: bold;
+    font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #212121;
+  transition: background-color 1s ease;
+  font-family:"Lato";
+  font-weight: 300;
+  letter-spacing: 1.25px;
+  font-size: 18px;
+}
+
+nav {
+  font-family: 'Mattone-Regular';
+  font-size: 13px;
+}
+
+.bg-black {
+  background-color: #212121;
+}
+.text-black {
+  color: #212121;
+}
+.bg-dark-gray {
+  background-color: #727272;
+}
+.text-dark-gray {
+  color: #727272;
+}
+.bg-mauve {
+  background-color: #CEBAB6;
+}
+.text-mauve {
+  color: #CEBAB6;
+}
+.bg-tan {
+  background-color: #FCE5CF;
+}
+.text-tan {
+  color: #FCE5CF;
+}
+.bg-light-gray {
+  background-color: #E5E5E5;
+}
+.text-light-gray {
+  color: #E5E5E5;
+}
+.bg-light-white {
+  background-color: #FFFFFF;
+}
+.text-light-white {
+  color: #FFFFFF;
+}
+
+
+h2 {
+  font-family: "Lato";
+  font-size: 2.25em;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 1.5px;
+}
+h3 {
+  font-family: "Mattone-Regular";
+  font-size: 1.75em;
+  line-height: 1.75;
+  letter-spacing: 1px;
+}
+h4 {
+  font-family:"Mattone-Regular";
+  font-size: 1.75em;
+  line-height: 1;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+h5 {
+  font-family:"Lato";
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+h6 {
+  font-family:"Lato";
+  font-weight: 800;
+  font-size: 14px;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+
+.color-about{
+  background-color: #212121;
+}
+
+.navbar-brand {
+  font-size: 13px;
+  color: #EBE8E8;
+
+}
+.navbar-brand:hover {
+  font-size: 13px;
+  color: #FFFFFF;
+
+}
+.navbar-nav .nav-link {
+  color: #EBE8E8;
+}
+.navbar-nav .active>.nav-link{
+  color: #EBE8E8;
+  }
+.navbar-nav .nav-link:hover{
+      color: #FFFFFF;
+    }
+.wrapper {
+  padding: 10vh 5vw 5vh 15vw;
+  min-height: 100vh;
+}
+.wrapper2 {
+  padding: 10vh 8vw 5vh 5vw;
+  min-height: 100vh;
+}
+.wrapper3 {
+  padding: 5vh 10vw;
+
+}
+
+.home .hello {
+  color: #727272;
+  padding-top: 13vh;
+}
+
+/* .home .im-alecia {
+  font-family: 'Mattone-Regular', sans-serif;
+  padding-left: 2.2vw;
+  letter-spacing: 1px;
+} */
+
+.home .blurb {
+  font-family: 'Mattone-Regular', sans-serif;
+  font-size: 5vw;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 5vh 5vw 2vh 5vw;
+  }
+  .home .hello {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .home .blurb {
+    font-size: 7.25vw;
+  }
+}
+
+.home .and {
+  font-family:"Lato";
+  font-weight: 400;
+  font-size: 2.6vw;
+
+}
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,100px,0);
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,100px,0);
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated-1 {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+.animated-1.5 {
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both
+}
+.animated-2 {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.location {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    font-size: .6rem;
+    text-align: right;
+}
+
+@media (min-width: 46.25em){
+.location {
+    margin: 1.5rem;
+    font-size: .7rem;
+}
+}
+
+.location .wrap {
+    height: 24px;
+    overflow: hidden;
+}
+.wrap, .wrap span {
+    display: inline-block;
+}
+.wrap {
+    overflow: hidden;
+}
+.coordinates a{
+  font-family: 'Mattone-Regular',sans-serif;
+      font-size: 14px;
+     color: #727272;
+}
+.coordinates a:hover {
+  text-decoration: none;
+}
+
+/* .icon-scroll,
+.icon-scroll:before {
+    position: absolute;
+    left: 50%
+}
+.icon-scroll {
+    width: 30px;
+    height: 50px;
+    margin-left: -20px;
+    bottom: 1.75rem;
+    margin-top: -35px;
+    border: 2px solid #727272;
+    border-radius: 25px
+}
+
+.icon-scroll:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #727272;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll
+}
+@keyframes scroll {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(26px)
+    }
+} */
+
+.about {
+  position: absolute;
+      top: 78vh;
+      left: 8vw;
+      font-family:"Lato";
+      font-weight: 800;
+      transform-origin: top left;
+      transform: rotate(90deg);
+      transition: top 350ms ease-in-out;
+      color: #F9DF86;
+      letter-spacing: 1px;
+
+}
+
+.about.snap-to-top {
+    top: 5px;
+}
+
+.about>hr {
+    display: inline-block;
+    width: 30vh;
+    margin: 0;
+    margin-bottom: 5px;
+background-color: #FFFFFF;
+border: 0;
+height: 1px;}
+
+.about a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition-duration: .5s;
+}
+.about a:hover {
+  color: #FCE5CF;
+  transition-duration: .5s;
+
+}
+
+.about span {
+    display: inline-block;
+    transform: rotate(90deg);
+    border: 2px solid #FFFFFF;
+    padding: 12px;
+}
+hr.dash {
+    margin: 18px 0 24px;
+    width: 20%;
+    padding: 0;
+    height: .5px;
+    border: 0;
+    background-color: #FCE5CF;
+}
+.section-header {
+  color: #727272;
+  font-family:"Lato";
+  font-weight: 800;
+  letter-spacing: 1px;
+
+}
+.section-break {
+  height: 100vh;
+}
+.bio {
+  color: #FFFFFF;
+  font-family:"Lato";
+  font-weight: 800;
+  font-size: 1.25em;
+  line-height: 1.75;
+  letter-spacing: 1px;
+  padding-bottom: 7vh;
+}
+.skills li {
+  font-family:"Lato";
+  font-weight: 600;
+      color: #727272;
+      line-height: 2;
+      letter-spacing: 1.25px;
+
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+.bio {
+  font-size: 5.5vw;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.75;
+  letter-spacing: 1px;
+}
+ul {
+  padding-left: 0;
+  padding-bottom: 5vh;
+}
+.skills li {
+      line-height: 1.75;
+}
+
+}
+.bold-text {
+  font-family:"Lato";
+  font-weight: 600;
+}
+
+
+
+.neg-hero-margin {
+  margin-top: -10vw;
+}
+.case-study-overview {
+  padding-left:3vw;
+}
+.case-study-overview div {
+  max-width: 550px;
+}
+
+
+.miri-iphone-mockup img, .hp-logos img {
+  max-height: 100vh;
+  max-width: 100%;
+  display: block;
+margin: 0 auto;
+}
+
+.lady-beekman-mockup img {
+  min-height: 100%;
+  width: 100%;
+  display: block;
+margin: 0 auto;
+}
+.sm-text {
+ font-size: .75em;
+
+}
+.role .text {
+display: flex;
+flex-flow: column;
+justify-content: center;
+padding: 10px 10vw;
+}
+
+.hp-logos {
+display: flex;
+flex-flow: column;
+justify-content: center;
+padding: 80px 5vw;
+}
+.miri-wf img, .tcs-persona, .tcs-mu img{
+  max-width: 100%;
+  -webkit-box-shadow: 0 10px 16px -6px #777;
+	   -moz-box-shadow: 0 10px 16px -6px #777;
+	        box-shadow: 0 10px 16px -6px #777;
+}
+
+.home-pg-layout, .personas-layout {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 0 5vw;
+}
+.personas-photo {
+  min-width: 50px;
+  width: 15vw;
+  max-width: 175px;
+
+}
+.wireframe {
+  width: 100%;
+}
+.mockup {
+  width: 100%;
+  display: block;
+  margin:0 auto;
+}
+.tcs-wf img, .logos img {
+  max-width:100%;
+}
+
+
+
+/* CASE SUTDIES */
+.case-study nav .nav-item .nav-link, .case-study nav .navbar-brand {
+  color: #212121;
+}
+.cshero img {
+  min-width: 100vw;
+  max-width: 100vw;
+  margin: 0 auto;
+}
+.case-study section, .navbar {
+  max-width:100vw;
+}
