@@ -493,7 +493,7 @@ justify-content: center;
 padding: 80px 5vw;
 }
 .miri-wf img, .tcs-persona, .tcs-mu img{
-  max-width: 100%;
+  width: 100%;
   -webkit-box-shadow: 0 10px 16px -6px #777;
 	   -moz-box-shadow: 0 10px 16px -6px #777;
 	        box-shadow: 0 10px 16px -6px #777;
