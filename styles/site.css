@@ -176,6 +176,8 @@ ul.navbar-nav {
 }
 .wrapper {
   padding: 10vh 5vw 5vh 15vw;
+}
+.home.wrapper{
   max-height: 100vh;
 }
 .wrapper2 {
