@@ -213,29 +213,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.4.1/vanilla-tilt.min.js"></script>
-<script src="../scripts/scripts.js"></script>
+<script src="./scripts/scripts.js"></script>
 
 <script>
-    // $(window).scroll(function () {
-    //   if($(window).scrollTop() > 0) {
-    //     element.addClass("animateMe");
-    //   }
-    //   else {
-    //     element.removeClass("animateMe");
-    //   }
-    // });
+VanillaTilt.init(document.querySelectorAll(".item"), {
+    max: 5,
+    speed: 2500,
+    reverse: true
+});
 
-
-    VanillaTilt.init(document.querySelectorAll(".item"), {
-        max: 5,
-        speed: 2500,
-        reverse: true
-    });
-
-    $(".item").click(function() {
-        window.location = $(this).attr("data-href");
-        return false;
-    });
+$(".item").click(function() {
+    window.location = $(this).attr("data-href");
+    return false;
+});
 </script>
 
 
