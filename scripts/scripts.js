@@ -1,120 +1,224 @@
-// $(window).scroll(function() {
-//
-//   // selectors
-//   var $window = $(window),
-//       $body = $('body'),
-//       $panel = $('.panel');
-//
-//   // Change 33% earlier than scroll position so colour is there when you arrive.
-//   var scroll = $window.scrollTop() + ($window.height() / 3);
-//
-//   $panel.each(function () {
-//     var $this = $(this);
-//
-//     // if position is within range of this panel.
-//     // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
-//     // Remember we set the scroll to 33% earlier in scroll var.
-//     if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
-//
-//       // Remove all classes on body with color-
-//       $body.removeClass(function (index, css) {
-//         return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
-//       });
-//
-//       // Add class of currently active div
-//       $body.addClass('color-' + $(this).data('color'));
-//     }
-//   });
-//
-// }).scroll();
-//
-//
 
+/*!
+ * luxy.js v0.1.0: Inertia scroll and parallax effect plugin in Vanilla.js
+ * (c) 2018 Mineo Okuda
+ * MIT License
+ * git+ssh://git@github.com:min30327/luxy.js.git
+ */
 
-class SmoothScroll {
-    constructor(_containerSelector, _params) {
+/**
+ * Written by Mineo Okuda on 01/03/18.
+ *
+ * Mineo Okuda - development + design
+ * https://willstyle.co.jp
+ * https://github.com/min30327
+ *
+ * MIT license.
+ */
 
-      // Init DOM elements
-      this.$ = {
-        container: document.querySelector(_containerSelector),
-        containerBody: document.querySelector(_containerSelector + '__body'),
-        hitbox: document.querySelector(_containerSelector + '--hitbox'),
-        duration: document.querySelector('.controls__duration'),
-      }
+(function(root, factory) {
+    'use strict';
 
-      console.log(this.$.controlsEasing)
-
-      // Init params
-      this.params = {
-        containerHeight: this.$.containerBody.offsetHeight,
-        duration: _params.duration,
-        timingFunction: _params.timingFunction,
-      }
-
-      // Launch init functions
-      document.addEventListener('DOMContentLoaded', () => {
-        this._initStyle()
-        this._initListeners()
-      })
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define([], factory);
+    } else if (typeof exports === 'object') {
+        // COMMONJS
+        module.exports = factory();
+    } else {
+        // BROWSER
+        root.luxy = factory();
     }
+}(this, (function() {
 
-    _initStyle() {
+    'use strict';
 
-      const currentScrollY = window.scrollY
+    var defaults = {
+        wrapper: '.smoothscroll',
+        targets: '.luxy-el',
+        wrapperSpeed: 0.08,
+        targetSpeed: 0.02,
+        targetPercentage: 0.1
+    };
 
-       this.$.container.style.height = `100vh`
+    var requestAnimationFrame =
+        window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.requestAnimationFrame = requestAnimationFrame;
+    var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-      // Set containerBody style
-      this.$.containerBody.style.transform = `translateY(${-window.scrollY}px)` // Scroll to current scroll
+    /**
+     * Merge two or more objects. Returns a new object.
+     * @param {Object}   objects  The objects to merge together
+     * @returns {Object}          Merged values of defaults and options
+     */
+    var extend = function() {
 
-      // Add transtion after scroll to
-      const addTransition = () => {
-        // Set currentTranslateY
-        const regex = /\s?([,])\s?/
-        const splitTransform = getComputedStyle(this.$.containerBody).transform.split(regex)
-        const currentTranslateY = parseInt(splitTransform[splitTransform.length-1])
+        // Variables
+        var extended = {};
+        var deep = false;
+        var i = 0;
+        var length = arguments.length;
 
-        if(-currentTranslateY != currentScrollY) {
-          setTimeout(() => {
-            addTransition(currentTranslateY)
-          }, 10);
-        } else {
-          // Add transition
-          this.$.containerBody.style.transition = `transform ${this.params.duration}ms ${this.params.timingFunction}`
+        // Merge the object into the extended object
+        var merge = function(obj) {
+            for (var prop in obj) {
+                if (obj.hasOwnProperty(prop)) {
+                    extended[prop] = obj[prop];
+                }
+            }
+        };
+
+        // Loop through each object and conduct a merge
+        for (; i < length; i++) {
+            var obj = arguments[i];
+            merge(obj);
         }
-      }
 
-      // Run addTranstion
-      addTransition()
+        return extended;
+
+    };
+
+    var Luxy = function() {
+        this.Targets = [];
+        this.TargetsLength = 0;
+        this.wrapper = '';
+        this.windowHeight = 0;
+        this.wapperOffset = 0;
+    };
+    Luxy.prototype = {
+        isAnimate: false,
+        isResize: false,
+        scrollId: "",
+        resizeId: "",
+        init: function(options) {
+            this.settings = extend(defaults, options || {});
+            this.wrapper = document.querySelector(this.settings.wrapper);
+
+            if (this.wrapper === "undefined") {
+                return false;
+            }
+            this.targets = document.querySelectorAll(this.settings.targets);
+            document.body.style.height = this.wrapper.clientHeight + 'px';
+
+            this.windowHeight = window.clientHeight;
+            this.attachEvent();
+            this.apply(this.targets, this.wrapper);
+            this.animate();
+            this.resize();
+        },
+        apply: function(targets, wrapper) {
+            this.wrapperInit();
+
+            this.targetsLength = targets.length;
+            for (var i = 0; i < this.targetsLength; i++) {
+                var attr = {
+                    offset: targets[i].getAttribute('data-offset'),
+                    speedX: targets[i].getAttribute('data-speed-x'),
+                    speedY: targets[i].getAttribute('data-speed-Y'),
+                    percentage: targets[i].getAttribute('data-percentage'),
+                    horizontal: targets[i].getAttribute('data-horizontal')
+                };
+                this.targetsInit(targets[i], attr);
+            }
+        },
+        wrapperInit: function() {
+            this.wrapper.style.width = '100%';
+            this.wrapper.style.position = 'fixed';
+        },
+        targetsInit: function(elm, attr) {
+
+            this.Targets.push({
+                elm: elm,
+                offset: attr.offset ? attr.offset : 0,
+                horizontal: attr.horizontal ? attr.horizontal : 0,
+                top: 0,
+                left: 0,
+                speedX: attr.speedX ? attr.speedX : 1,
+                speedY: attr.speedY ? attr.speedY : 1,
+                percentage: attr.percentage ? attr.percentage : 0
+            });
+        },
+        scroll: function() {
+            var scrollTopTmp = document.documentElement.scrollTop || document.body.scrollTop;
+            this.scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var offsetBottom = this.scrollTop + this.windowHeight;
+            this.wrapperUpdate(this.scrollTop);
+            for (var i = 0; i < this.Targets.length; i++) {
+                this.targetsUpdate(this.Targets[i]);
+            }
+        },
+        animate: function() {
+            this.scroll();
+            this.scrollId = requestAnimationFrame(this.animate.bind(this));
+        },
+        wrapperUpdate: function() {
+
+            this.wapperOffset += (this.scrollTop - this.wapperOffset) * this.settings.wrapperSpeed;
+            this.wrapper.style.transform = 'translate3d(' + 0 + ',' + Math.round(-this.wapperOffset * 100) / 100 + 'px ,' + 0 + ')';
+        },
+        targetsUpdate: function(target) {
+            target.top += (this.scrollTop * Number(this.settings.targetSpeed) * Number(target.speedY) - target.top) * this.settings.targetPercentage;
+            target.left += (this.scrollTop * Number(this.settings.targetSpeed) * Number(target.speedX) - target.left) * this.settings.targetPercentage;
+            var targetOffsetTop = (parseInt(target.percentage) - target.top - parseInt(target.offset));
+            var offsetY = Math.round(targetOffsetTop * -100) / 100;
+            var offsetX = 0;
+            if (target.horizontal) {
+                var targetOffsetLeft = (parseInt(target.percentage) - target.left - parseInt(target.offset));
+                offsetX = Math.round(targetOffsetLeft * -100) / 100;
+            }
+            target.elm.style.transform = 'translate3d(' + offsetX + 'px ,' + offsetY + 'px ,' + 0 + ')';
+        },
+        resize: function() {
+            var self = this;
+            self.windowHeight = (window.innerHeight || document.documentElement.clientHeight || 0);
+            if (parseInt(self.wrapper.clientHeight) != parseInt(document.body.style.height)) {
+                document.body.style.height = self.wrapper.clientHeight + 'px';
+            }
+            self.resizeId = requestAnimationFrame(self.resize.bind(self));
+        },
+        attachEvent: function() {
+            var self = this;
+            window.addEventListener('resize', (function() {
+                if (!self.isResize) {
+                    cancelAnimationFrame(self.resizeId);
+                    cancelAnimationFrame(self.scrollId);
+                    self.isResize = true;
+                    setTimeout((function() {
+                        self.isResize = false;
+                        self.resizeId = requestAnimationFrame(self.resize.bind(self));
+                        self.scrollId = requestAnimationFrame(self.animate.bind(self));
+                    }), 200);
+                }
+            }));
+
+        }
+    };
 
 
+    var luxy = new Luxy();
 
+    return luxy;
+})));
+
+$(document).ready(function() {
+    luxy.init();
+    scrollToAnchor(window.location.hash);
+});
+
+$('a').click(function(e) {
+    e.preventDefault();
+    var target = $(this).attr('href');
+    if (target.startsWith('#')) {
+        scrollToAnchor(target);
+    } else {
+        window.location.href = target;
     }
+});
 
-    _initListeners() {
-
-      window.addEventListener('scroll', (event) => { this._handleScroll(event) })
-      window.addEventListener('resize', () => { this._handleResize() })
-
-    }
-
-    _handleScroll(_event) {
-
-      this.$.containerBody.style.transform = `translateY(${-window.scrollY}px)`
-    }
-
-    _handleResize() {
-      // Update usefull params
-      this.params.containerHeight = this.$.containerBody.offsetHeight
-
-    ß
-    }
-
-  }
-
-  const params = {
-    duration: 1000,
-    timingFunction: 'cubic-bezier(0.23, 1, 0.32, 1)'
-  }
-
-  new SmoothScroll('.smoothscroll', params)
+function scrollToAnchor(target) {
+    if(!target)
+    return;
+    var y = $(target).position().top;
+    window.scrollTo(0, y);
+}
